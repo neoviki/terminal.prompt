@@ -1,0 +1,26 @@
+#! /bin/bash
+: '
+   Terminal Prompt Utility 
+
+    				-->   [ Author ]  Viki (a) Vignesh Natarajan 
+				-->   [ Domain ]  https://vikiworks.io 
+'
+usage(){
+    echo
+    echo "Usage: prompt "<text>""
+    echo
+    echo
+    echo "Example: prompt "macbook : ""
+    echo
+    echo
+}
+
+if [ -z "$1" ]; then
+    usage
+    exit 1
+fi
+
+TEXT="$1"
+
+echo "PS1="\"$TEXT \""" >> ~/.bashrc
+bash
